@@ -48,10 +48,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd ~/dopaming
-
-            docker compose -f compose.prod.yml pull springboot
-
-            docker compose -f compose.prod.yml up -d
-
+            cd ~/likelion-backend
+            docker compose -f compose.yml pull springboot
+            docker compose -f compose.yml up -d
             docker image prune -f
