@@ -39,7 +39,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/이미지이름:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/likelion-backend:latest
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
